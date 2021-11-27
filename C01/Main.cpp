@@ -1,10 +1,10 @@
 // =====================================
-// FileName: file.cpp
+// FileName: Main.cpp
 // Usage: $ make
 // Description: ...
 // Dependency: ...
 // Author: Lynn <lynn840429@gmail.com>
-// Version: v1.1.0: 大版更新版本號.小更新版本號.bug修正版本號, Date
+// Version: ...
 // =====================================
 /* Include Packages */
 #include <iostream>

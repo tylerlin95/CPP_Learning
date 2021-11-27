@@ -1,5 +1,5 @@
 hello : clean
-	g++ Main_2021_11_13.cpp -o Main
+	g++ ./C08/Main.cpp -o Main
 	@./Main
 
 .PHONY : clean
