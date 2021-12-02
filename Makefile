@@ -1,5 +1,5 @@
 hello : clean
-	g++ ./C09/Main.cpp -o Main
+	g++ ./C10/Main.cpp ./C10/Log.h ./C10/Log.cpp -o Main
 	@./Main
 
 .PHONY : clean

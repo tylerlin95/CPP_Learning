@@ -1,19 +1,13 @@
 /**************************************************
- * FileName: Main.cpp
- * Usage: $ make
+ * FileName: code.cpp
+ * Usage: Define Classes & Functions
  * Description: ...
  * Dependency: ...
  * Author: Lynn <lynn840429@gmail.com>
  * Version: ...
  **************************************************/
 /*** Include Packages ***/
-// #include <>
 #include <iostream>
-
-
-
-/*** User Defined Parameters ***/
-// PARAMETER_1 = 1
 
 
 
@@ -51,13 +45,3 @@
 // }
 
 
-
-/*** Main ***/
-int main()
-{
-    /***
-     * Process Info: ...
-     ***/
-
-    return 0;
-}
