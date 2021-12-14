@@ -27,35 +27,30 @@ int main()
     /***
      * Process Info: ...
      ***/
-    /// For Loop
+    /// continue
     for (int iter=0; iter<5; iter++) {
+        if (iter%2==0)
+            continue;
         std::cout << iter << " ";
-        Log("Hello World!");
+        Log("continue: Hello World!");
     }
 
-    int iter = 0;
-    bool condition = true;
-    for ( ; condition; ) {
+    /// break
+    for (int iter=0; iter<5; iter++) {
+        if ((iter+1)%2==0)
+            break;
         std::cout << iter << " ";
-        Log("for: Hello World!");
-        iter++;
-        if (!(iter<5)) {
-            condition = false;
-        }
+        Log("break: Hello World!");
     }
 
-    /// While Loop
-    iter = 0;
-    while (iter<5) {
-        Log("while: Hello World!");
-        iter++;
+    /// return
+    for (int iter=0; iter<5; iter++) {
+        if ((iter+1)%2==0)
+            return 0;
+        std::cout << iter << " ";
+        Log("return: Hello World!");
     }
-    
-    iter = 0;
-    do {
-        Log("do while: Hello World!");
-        iter++;
-    } while (iter<5);
+
 
 
     return 0;
