@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+Main
 
 # Others
 .directory
