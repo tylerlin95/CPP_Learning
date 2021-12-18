@@ -1,4 +1,4 @@
-.CLASS_FOLDER = ./C16/
+.CLASS_FOLDER = ./C17/
 
 hello : clean
 	g++ $(.CLASS_FOLDER)Main.cpp -o Main
