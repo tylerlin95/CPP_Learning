@@ -9,6 +9,26 @@
 /*** Include Packages ***/
 #ifndef _CODE_H
 #define _CODE_H
+#include <iostream>
+
+
+
+/*** Function Declaration ***/
+
+
+
+/*** Class Definition ***/
+// class ClassName
+// {
+// 	/***
+// 	 * Class Info: 
+// 	 ***/
+//     public:
+// 	    int var;
+    
+//     private:
+    
+// };
 
 
 
