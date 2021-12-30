@@ -1,7 +1,8 @@
-.CLASS_FOLDER = ./C20/
+.CLASS_FOLDER = ./C21/
 
 hello : clean
-	g++ $(.CLASS_FOLDER)Main.cpp $(.CLASS_FOLDER)log.h $(.CLASS_FOLDER)log.cpp -o Main
+	g++ $(.CLASS_FOLDER)Main.cpp $(.CLASS_FOLDER)log.h $(.CLASS_FOLDER)log.cpp $(.CLASS_FOLDER)static.cpp -o Main
+#	g++ $(.CLASS_FOLDER)Main.cpp -o Main
 	@./Main
 
 .PHONY : clean
