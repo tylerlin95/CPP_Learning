@@ -28,22 +28,29 @@ class Entity
     public:
         float X, Y;
 
-    Entity()
-    {
-        X = 0.0f;
-        Y = 0.0f;
-    }
+        Entity()
+        {
+            std::cout << "Created Entity!" << std::endl;
+            X = 0.0f;
+            Y = 0.0f;
+        }
 
-    Entity(float x, float y)
-    {
-        X = x;
-        Y = y;
-    }
+        Entity(float x, float y)
+        {
+            std::cout << "Created Entity!" << std::endl;
+            X = x;
+            Y = y;
+        }
 
-    void Print()
-    {
-        std::cout << X << ", " << Y << std::endl;
-    }
+        ~Entity()
+        {
+            std::cout << "Destroyed Entity!" << std::endl;
+        }
+
+        void Print()
+        {
+            std::cout << X << ", " << Y << std::endl;
+        }
 };
 
 
