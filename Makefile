@@ -1,4 +1,4 @@
-.CLASS_FOLDER = ./C28/
+.CLASS_FOLDER = ./C29/
 
 hello : clean
 #	g++ $(.CLASS_FOLDER)Main.cpp $(.CLASS_FOLDER)log.h $(.CLASS_FOLDER)log.cpp $(.CLASS_FOLDER)static.cpp -o Main
