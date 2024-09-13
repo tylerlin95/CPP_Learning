@@ -1,17 +1,22 @@
-.CLASS_FOLDER = ./C12/
+all: main
 
-hello : clean
-#	g++ $(.CLASS_FOLDER)Main.cpp $(.CLASS_FOLDER)log.h $(.CLASS_FOLDER)log.cpp $(.CLASS_FOLDER)static.cpp -o Main
+CXX = clang++
+override CXXFLAGS += -g -Wmost -Werror
 
-	g++ -S $(.CLASS_FOLDER)Main.cpp $(.CLASS_FOLDER)log.h $(.CLASS_FOLDER)log.cpp
-#	g++ -S $(.CLASS_FOLDER)Main.cpp
+#SRCS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.cpp' -print | sed -e 's/ /\\ /g')
+#HEADERS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.h' -print)
 
-	g++ $(.CLASS_FOLDER)Main.cpp $(.CLASS_FOLDER)log.h $(.CLASS_FOLDER)log.cpp -o Main
-#	g++ $(.CLASS_FOLDER)Main.cpp -o Main
+### Modify this part -> ###
+SRCS = ./Template/C++/Main.cpp
+HEADERS = ./Template/C++/code.h
 
-	@./Main
+### <- Modify this part ###
 
+main: $(SRCS) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o "$@"
 
-.PHONY : clean
-clean :
-	@rm -f *.s *.o
+main-debug: $(SRCS) $(HEADERS)
+	$(CXX) $(CXXFLAGS) -U_FORTIFY_SOURCE -O0 $(SRCS) -o "$@"
+
+clean:
+	rm -f main main-debug

@@ -11,25 +11,21 @@
 #define _CODE_H
 #include <iostream>
 
-
+#include "./code.cpp"
 
 /*** Function Declaration ***/
 
-
-
 /*** Class Definition ***/
-// class ClassName
-// {
-// 	/***
-// 	 * Class Info: 
-// 	 ***/
-//     public:
-// 	    int var;
-    
-//     private:
-    
-// };
+class ClassName {
+  /***
+   * Class Info:
+   ***/
+public:
+  int var = 100;
+  int func_out = function_name(10);
+  void func() { std::cout << func_out << std::endl; }
 
-
+private:
+};
 
 #endif
