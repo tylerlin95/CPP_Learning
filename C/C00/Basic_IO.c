@@ -9,9 +9,12 @@
 /*** Include Packages ***/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 
 /*** User Defined Parameters ***/
 // PARAMETER_1 = 1
+#define LENGTH 80
 
 /*** Folder/Path/Parameters Setting ***/
 // FOLDER_1 = "./"
@@ -91,30 +94,71 @@ int main() {
   //   }
 
   /* 泡沫排序法 */
-  int i, j, k, temp;
-    int test[5] = { 4,3,2,5,1 };
-    for (i = 0; i < 5 - 1; i++) {
-      for (j = 0; j < 5 - i - 1; j++) {
-        //see progress
-        printf("\ni,j:%d,%d : ", i, j);
-        for (k = 0; k < 5; k++) {
-          printf("%d ", test[k]);
-        }
-        //end
-        if (test[j] > test[j + 1]) {
-          temp = test[j];
-          test[j] = test[j + 1];
-          test[j + 1] = temp;
-          printf("swap");
-        }
-      }
-    }
-    //see end
-    printf("\nend     : ");
-    for (k = 0; k < 5; k++) {
-      printf("%d ", test[k]);
-    }
-    //end
+  // int i, j, k, temp;
+  //   int test[5] = { 4,3,2,5,1 };
+  //   for (i = 0; i < 5 - 1; i++) {
+  //     for (j = 0; j < 5 - i - 1; j++) {
+  //       //see progress
+  //       printf("\ni,j:%d,%d : ", i, j);
+  //       for (k = 0; k < 5; k++) {
+  //         printf("%d ", test[k]);
+  //       }
+  //       //end
+  //       if (test[j] > test[j + 1]) {
+  //         temp = test[j];
+  //         test[j] = test[j + 1];
+  //         test[j + 1] = temp;
+  //         printf("swap");
+  //       }
+  //     }
+  //   }
+  //   //see end
+  //   printf("\nend     : ");
+  //   for (k = 0; k < 5; k++) {
+  //     printf("%d ", test[k]);
+  //   }
+  //   //end
+
+  /* 字串 */
+  char text[] = "hello";
+	int length = sizeof(text) / sizeof(text[0]);
+
+  size_t length_func = strlen(text);
+  printf("字串長度：%lu\n", length_func);
+
+	for (int i = 0; i < length; i++) {
+		if (text[i] == '\0') {
+			puts("null");
+		}
+		else {
+			printf("%c-", text[i]);
+		}
+	}
+  putchar('\n');
+
+  char input[100] = "hello1, hello2";
+	char copied[100];
+  strcpy(copied, input);
+  printf("input:%s\ncopied:%s\n", input, copied);
+
+  copied[strlen(copied) - 1] = '\0';
+  char *loc = strstr(copied, "hello1");
+  printf("loc:%s\n", loc);
+
+  if (loc == NULL) {
+		printf("找不到符合的子字串\n");
+	}
+	else {
+		printf("在索引位置 %lu 處找到子字串\n", loc - input);
+	}
+
+  // char *string1 = "needle in a haystack";
+  // char *string2 = "haystack";
+  // char *result;
+ 
+  // result = strstr(string1, string2);
+  // /* Result = a pointer to "haystack" */
+  // printf("%s\n", result);
 
   return 0;
 }
