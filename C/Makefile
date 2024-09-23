@@ -10,10 +10,12 @@ CXX = gcc
 ### Modify this part -> ###
 # SRCS = ./Template/C++/Main.cpp
 # HEADERS = ./Template/C++/code.h
-SRCS = ./C00/Basic_IO.c
+SRCS = ./C00/c_pointer.c
 HEADERS = 
 
 ### <- Modify this part ###
+
+.PHONY: main main-debug clean
 
 main: $(SRCS) $(HEADERS)
 	$(CXX) $(SRCS) -o "$@"
