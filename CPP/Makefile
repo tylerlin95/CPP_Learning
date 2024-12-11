@@ -9,7 +9,7 @@ override CXXFLAGS += -g -Wmost -Werror
 ### Modify this part -> ###
 # SRCS = ./Template/C++/Main.cpp
 # HEADERS = ./Template/C++/code.h
-SRCS = ./C00/Basic_IO.c
+SRCS = ./C00/main.cpp
 HEADERS = 
 
 ### <- Modify this part ###
@@ -20,5 +20,10 @@ main: $(SRCS) $(HEADERS)
 main-debug: $(SRCS) $(HEADERS)
 	$(CXX) $(CXXFLAGS) -U_FORTIFY_SOURCE -O0 $(SRCS) -o "$@"
 
+run: main
+	@echo "Start running the program..."
+	@./main
+
+.PHONY: clean
 clean:
 	rm -f main main-debug
