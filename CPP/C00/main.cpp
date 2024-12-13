@@ -14,6 +14,8 @@
 /* User Defined Parameters */
 // PARAMETER_1 = 1
 
+#define ENABLE_DEBUG // 注释掉这一行，可以禁用掉调试输出
+
 
 
 /* Folder/Path/Parameters Setting */
@@ -46,6 +48,18 @@
 // 	"""
 // 	var_name = 1
 
+int getUserInput()
+{
+    #ifdef ENABLE_DEBUG
+    std::cerr << "getUserInput() called\n";
+    #endif
+
+    std::cout << "Enter a number: ";
+    int x{};
+    std::cin >> x;
+    return x;
+}
+
 
 
 /* Main */
@@ -53,6 +67,12 @@ int main()
 {
     std::cout << "CPP Test" << std::endl;
 
+    #ifdef ENABLE_DEBUG
+    std::cerr << "main() called\n";
+    #endif
+
+    int x{ getUserInput() };
+    std::cout << "You entered: " << x << '\n';
 
     return 0;
 }
